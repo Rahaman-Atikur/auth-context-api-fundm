@@ -1,9 +1,11 @@
 import React from 'react';
-
+import { Outlet } from 'react-router';
+import Navbar from './Navbar/Navbar';
 const Roots = () => {
     return (
         <div>
-            <h2>This is Root and Finding the Concepts as well</h2>
+            <Navbar></Navbar>
+            <Outlet></Outlet>
         </div>
     );
 };
