@@ -3,7 +3,7 @@ import { NavLink, useLocation, useNavigate } from "react-router";
 const Navbar = () => {
     const navigation = useNavigate();
     const location = useLocation();
-    console.log(location);
+    console.log(location.pathname);
     return (
         <div>
             <header className="p-4 bg-gray-500 text-white dark:bg-gray-100 dark:text-gray-800">
