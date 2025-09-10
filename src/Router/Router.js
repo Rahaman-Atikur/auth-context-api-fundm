@@ -3,7 +3,7 @@ import Roots from "../Componets/Roots";
 import Home from "../Componets/Home/Home";
 import About from "../Componets/About/About";
 import SignIn from "../Componets/SignIn/SignIn";
-import SignOut from "../Componets/SignOut/SignOut";
+import SignUp from "../Componets/SignUp/SignUp";
 export const router = createBrowserRouter([
     {
         path: "/",
@@ -15,7 +15,7 @@ export const router = createBrowserRouter([
             },
             { path: "about", Component: About },
             { path: "/signin", Component: SignIn },
-            { path: "/signout", Component: SignOut }
+            { path: "/signup", Component: SignUp }
         ],
     },
 ]);

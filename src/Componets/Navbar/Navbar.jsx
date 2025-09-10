@@ -67,10 +67,13 @@ const Navbar = () => {
                         </li>
                     </ul>
                     <div className="items-center flex-shrink-0 hidden lg:flex">
-                        <button onClick={() => navigation("/signout")} className={`self-center px-8 py-3 rounded ${pathname=="/signup"?"text-red-600":""}`}>Sign up</button>
-                        <button onClick={() => navigation("/signin")} className={`self-center px-8 py-3 font-semibold rounded dark:bg-violet-600 dark:text-gray-50 ${pathname=="/signout"?"text-red-700":""}`}>
+                        <button onClick={() => navigation("/signup")}
+                         className={`self-center px-8 py-3 rounded ${pathname=="/signup"?"text-red-600":""}`}>Sign up</button>
+
+                        <button onClick={() => navigation("/signin")} className={`self-center px-8 py-3 font-semibold rounded dark:bg-violet-600 dark:text-gray-50 ${pathname=="/signin"?"text-red-700":""}`}>
                             Sign In
                         </button>
+                        
                     </div>
                     <button className="p-4 lg:hidden">
                         <svg
