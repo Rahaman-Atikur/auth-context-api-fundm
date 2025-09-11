@@ -2,7 +2,6 @@ import React from 'react';
 import { NavLink } from 'react-router';
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../../Firebase/firebase.config';
-
 const SignUp = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -10,7 +9,6 @@ const SignUp = () => {
         const email = e.target.email.value;
         const password = e.target.password.value;
         console.log(name, email, password);
-
         createUserWithEmailAndPassword(auth, email, password)
             .then((result) => {
                 console.log("User created:", result.user);
@@ -19,7 +17,6 @@ const SignUp = () => {
                 console.error("Error:", error.message);
             });
     };
-
     return (
         <div className="flex flex-col max-w-md mx-auto p-6 rounded-md bg-gray-200 mt-4">
             <div className="mb-8 text-center">
@@ -77,5 +74,4 @@ const SignUp = () => {
         </div>
     );
 };
-
 export default SignUp;
