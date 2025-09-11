@@ -1,9 +1,12 @@
-import {  signInWithEmailAndPassword } from 'firebase/auth';
-import React from 'react';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import React, { useContext } from 'react';
 import { NavLink } from 'react-router';
 import { auth } from '../../Firebase/firebase.config';
+import { valueContext } from '../Roots';
 
 const SignIn = () => {
+    const contextValue = useContext(valueContext);
+    console.log(contextValue);
     const handleSubmit = (e) => {
         e.preventDefault();
         const email = e.target.email.value;
@@ -11,7 +14,7 @@ const SignIn = () => {
         console.log(email, password);
 
         // createUserWithEmailAndPassword(auth, email, password)
-        signInWithEmailAndPassword(auth,email,password)
+        signInWithEmailAndPassword(auth, email, password)
             .then((user) => {
                 console.log(user);
             })
