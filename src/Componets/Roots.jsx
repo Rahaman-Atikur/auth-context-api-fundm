@@ -13,9 +13,9 @@ const Roots = () => {
     const handleSignUp  = (email,password)=>{
         createUserWithEmailAndPassword(auth,email,password)
     }
-    const contextValues = {
-        handleSignUp
-    }
+    // const contextValues = {
+    //     handleSignUp
+    // }
     return (
         <div>
             <Navbar></Navbar>

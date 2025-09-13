@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { NavLink } from 'react-router';
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../../Firebase/firebase.config';
+import { valueContext } from '../Roots';
 const SignUp = () => {
+
+    const handleSignUp = useContext(valueContext);
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -22,6 +25,11 @@ const SignUp = () => {
 
         if (password.length < 6) {
             alert("at least Six character");
+            return;
+        }
+        const wordValidations = /^(?=.*[a-z]).+$/
+        if (wordValidations.test(password)) {
+            alert("Password Must Contain at least One Capital Number");
             return;
         }
 
